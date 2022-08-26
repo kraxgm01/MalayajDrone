@@ -1,0 +1,35 @@
+package com.google.android.gms.internal.p001firebaseauthapi;
+
+import android.os.Parcel;
+import android.os.Parcelable;
+import com.google.android.gms.common.internal.safeparcel.AbstractSafeParcelable;
+import com.google.android.gms.common.internal.safeparcel.SafeParcelWriter;
+import com.google.firebase.auth.PhoneAuthCredential;
+
+/* renamed from: com.google.android.gms.internal.firebase-auth-api.zzog  reason: invalid package */
+/* compiled from: com.google.firebase:firebase-auth@@21.0.6 */
+public final class zzog extends AbstractSafeParcelable {
+    public static final Parcelable.Creator<zzog> CREATOR = new zzoh();
+    private final PhoneAuthCredential zza;
+    private final String zzb;
+
+    public zzog(PhoneAuthCredential phoneAuthCredential, String str) {
+        this.zza = phoneAuthCredential;
+        this.zzb = str;
+    }
+
+    public final void writeToParcel(Parcel parcel, int i) {
+        int beginObjectHeader = SafeParcelWriter.beginObjectHeader(parcel);
+        SafeParcelWriter.writeParcelable(parcel, 1, this.zza, i, false);
+        SafeParcelWriter.writeString(parcel, 2, this.zzb, false);
+        SafeParcelWriter.finishObjectHeader(parcel, beginObjectHeader);
+    }
+
+    public final PhoneAuthCredential zza() {
+        return this.zza;
+    }
+
+    public final String zzb() {
+        return this.zzb;
+    }
+}

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/white" android:padding="20dp" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ImageView android:layout_gravity="center" android:id="@+id/loginLogo" android:layout_width="160dp" android:layout_height="160dp" android:src="@drawable/logo" android:transitionName="logo_image"/>
+    <TextView android:textSize="40sp" android:textStyle="bold" android:textColor="#000" android:layout_gravity="center" android:id="@+id/helloText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/hello_there_welcome_back" android:textAlignment="center" android:transitionName="logo_text"/>
+    <TextView android:textSize="23sp" android:textStyle="normal" android:textColor="#0096ff" android:layout_gravity="center" android:id="@+id/loginText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="40dp" android:text="@string/log_in_to_continue" android:textAlignment="center"/>
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:layout_marginBottom="20dp">
+        <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/e_mail" style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+            <com.google.android.material.textfield.TextInputEditText android:id="@+id/email" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="textEmailAddress"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:hint="@string/password" app:passwordToggleEnabled="true" style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+            <com.google.android.material.textfield.TextInputEditText android:id="@+id/password" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="textPassword"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <Button android:layout_gravity="center" android:id="@+id/login_button" android:padding="18dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:text="@string/log_in" android:backgroundTint="#000"/>
+    </LinearLayout>
+</LinearLayout>
